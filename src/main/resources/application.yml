@@ -1,5 +1,4 @@
 server:
-<<<<<<< HEAD
   #ssl:
   #  key-store: classpath:keystore.p12
   #  key-store-password: password
@@ -7,12 +6,3 @@ server:
   #  key-alias: baeldung
   #  key-password: password
   port: 80
-=======
-  ssl:
-    key-store: classpath:keystore
-    key-store-password: password
-    key-store-type: pkcs12
-    key-alias: baeldung
-    key-password: password
-  port: 8443
->>>>>>> branch 'master' of git@github.com:evgeniydorofeev/w1.git
