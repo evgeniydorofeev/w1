@@ -21,8 +21,7 @@ public class SecurityConfig {
 		return http// .requiresChannel(channel -> channel.anyRequest().requiresSecure())
 				//.authorizeHttpRequests(authorize -> authorize.requestMatchers("/admin").authenticated())
 				//.authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll())
-				.httpBasic()
-				.and()
+//				.httpBasic().and()
 				.build();
 	}
 
