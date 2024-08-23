@@ -6,3 +6,15 @@ server:
   #  key-alias: baeldung
   #  key-password: password
   port: 80
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: tibet
+    password: tibet
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
