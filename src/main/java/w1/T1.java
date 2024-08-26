@@ -1,24 +1,18 @@
 package w1;
 
-import java.util.List;
+import java.time.ZonedDateTime;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
+@Data  
 @Entity
-@Setter
-@Getter
-public class T1 {
-	@Id
-	@GeneratedValue
-	private Long id;
-
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+//@DiscriminatorColumn(name = "employee_type", discriminatorType = DiscriminatorType.STRING)
+public class T1 extends EntityBase {
 	private String c1;
+	
+	private ZonedDateTime dt1;
 	
 //	@OneToMany(mappedBy = "t1")
 //	private List<T2> t2;
