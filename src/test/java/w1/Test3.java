@@ -1,9 +1,9 @@
 package w1;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class Test3 {
+	
+//	@Builder
+//	record R1(int x) {};
 	
   	public static void main(String[] args) {
 //		BigDecimal d1 = new BigDecimal("1.2");

@@ -1,9 +1,5 @@
-#FROM tomcat:latest
-#ADD target/w1.war /usr/local/tomcat/webapps/
-#EXPOSE 8080
-#CMD ["catalina.sh", "run"]
-
-FROM openjdk:latest
-COPY target/w1.jar /w1.jar
+FROM eclipse-temurin:21-alpine
+RUN mkdir /opt/app
+COPY target/w1.jar /opt/app
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/w1.jar"]
+ENTRYPOINT ["java","-jar","/opt/app/w1.jar"]

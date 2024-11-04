@@ -14,9 +14,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.MockedStatic;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-interface I {
-}
-
 //@ExtendWith(MockitoExtension.class)
 //@TestMethodOrder(OrderAnnotation.class)
 public class Test1 {
