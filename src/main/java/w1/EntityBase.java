@@ -12,7 +12,6 @@ public class EntityBase {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 //	@SequenceGenerator(sequenceName = "xxx", name = "xxx")
 //	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "xxx")
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	
 	@Version 
