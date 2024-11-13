@@ -9,7 +9,7 @@ import jakarta.persistence.Version;
 @MappedSuperclass
 public class EntityBase {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 //	@SequenceGenerator(sequenceName = "xxx", name = "xxx")
 //	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "xxx")
 	private Long id;
