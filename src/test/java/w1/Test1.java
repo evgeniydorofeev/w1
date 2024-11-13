@@ -40,8 +40,7 @@ public class Test1 {
 //	
 	@Test
 	public void xxx() {
-//		int x = 0;
-//		assertThat(x).isEqualTo(1);
+		
 	}
 
 }

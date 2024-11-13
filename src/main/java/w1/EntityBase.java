@@ -9,11 +9,11 @@ import jakarta.persistence.Version;
 @MappedSuperclass
 public class EntityBase {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 //	@SequenceGenerator(sequenceName = "xxx", name = "xxx")
 //	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "xxx")
 	private Long id;
 	
-	@Version 
+	@Version   
 	private Long version;
 }
