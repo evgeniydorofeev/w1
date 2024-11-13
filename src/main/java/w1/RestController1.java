@@ -1,20 +1,22 @@
 package w1;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import java.util.Map;
 
-@Controller
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@RestController
 //@RequestMapping("") 
-public class Controller1 {
+public class RestController1 {
 	
-	
-	@GetMapping("/v1")
-    public String viewBooks(Model model) {
-//        model.addAttribute("book", "xxxx");
-		model.addAttribute("serverTime", "!!!!!!");
-		return "view1";
-    }
+//	@Autowired  
+//	ThreadPoolTaskExecutor ex;
 	
 //	@Scheduled(fixedDelay = 1000)
 //	public void xxx() {
@@ -28,6 +30,12 @@ public class Controller1 {
 //		return mv;
 //	}
 //	
+	@GetMapping("/t1")
+	public String t1() {
+//		return Map.of("1", "4");
+		return "/xxx/view1.jsp";
+	}
+	
 //	@CrossOrigin(origins = "http://localhost:8080")
 //	@PostMapping(value = "/t2", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 //	public void t2(HttpServletRequest rq) {

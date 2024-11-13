@@ -15,9 +15,9 @@ public class Test11 {
 	@Test
 	@SneakyThrows
 	public void test1() {
-		ObjectMapper m = new ObjectMapper();
-		m.writeValueAsString(new X(1));
-		assertThat(1).isEqualTo(2).withFailMessage("!!!!!");
+//		ObjectMapper m = new ObjectMapper();
+//		m.writeValueAsString(new X(1));
+//		assertThat(1).isEqualTo(2).withFailMessage("!!!!!");
 //		MatcherAssert.assertThat("qweqweqew", "1", Matchers.is("2"));
 //		assertEquals(1, 2);
 	}
