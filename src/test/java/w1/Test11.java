@@ -8,8 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.SneakyThrows;
 
-record X(int i) {}
-
 public class Test11 {
 	
 	@Test
