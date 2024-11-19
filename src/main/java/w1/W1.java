@@ -3,34 +3,18 @@ package w1;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-
-import lombok.SneakyThrows;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 //@EnableSqs
-//@EnableCaching
+@EnableCaching
 //@EnableScheduling 
 @ServletComponentScan
 public class W1 { // extends SpringBootServletInitializer {
 
-	int binarySearch(int[] a, int key) {
-		int low = 0;
-		int high = a.length - 1;
-		while (low <= high) {
-			int m = (low + high) >>> 1;
-			int v = a[m];
-			if (v < key) {
-				low = m -   1;
-			} else if (v > key) {
-				high = m + 1;
-			} else {
-				return m;
-			}
-		}
-		return -(low + 1);
-	}
-
-//	@SneakyThrows
 	public static void main(String[] args) {
 //		int[] a = {1,3,5};
 //		int i = Arrays.binarySearch(a, 0);

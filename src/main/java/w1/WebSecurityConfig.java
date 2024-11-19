@@ -21,7 +21,7 @@ public class WebSecurityConfig {
 				.csrf(AbstractHttpConfigurer::disable)
 //				.requiresChannel(channel -> channel.anyRequest().requiresSecure())
 //				.authorizeHttpRequests(authorize -> authorize.requestMatchers("/").authenticated())
-				.authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll())
+				.authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll()  )
 //				.httpBasic().and()
 //				formLogin(form -> form.loginPage("/login").and()
 //				.formLogin(withDefaults())

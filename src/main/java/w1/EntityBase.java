@@ -4,16 +4,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.Version;
+import jakarta.persistence.SequenceGenerator;
 
 @MappedSuperclass
 public class EntityBase {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-//	@SequenceGenerator(sequenceName = "xxx", name = "xxx")
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "xxx")
+	@SequenceGenerator(name = "xxx")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "xxx")
 	private Long id;
 	
-	@Version   
-	private Long version;
+//	@Version   
+//	private Long version;
 }

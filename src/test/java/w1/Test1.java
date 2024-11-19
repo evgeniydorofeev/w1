@@ -1,10 +1,19 @@
 package w1;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 import org.junit.jupiter.api.Test;
 
 //@ExtendWith(MockitoExtension.class)
 //@TestMethodOrder(OrderAnnotation.class)
 public class Test1 {
+
+	public int x;
+
+	public int getX() {
+		return x;
+	}
 
 //	static Stream<Arguments> stringIntAndListProvider() {
 //	    return Stream.of(
@@ -19,7 +28,7 @@ public class Test1 {
 //		List<Integer> l = spy(ArrayList.class);
 //		l.add(1);
 //		System.out.println(l.size());
-		// });
+	// });
 //		InOrder inOrder = Mockito.inOrder(l);
 //		inOrder.verify(l, times(2)).add(captor.capture());
 //		System.out.println(captor.getAllValues());
@@ -35,10 +44,9 @@ public class Test1 {
 //	private static List<Arguments> m1() {
 //		return List.of(Arguments.arguments("1"), Arguments.arguments("2"));
 //	}
-//	
+
 	@Test
 	public void xxx() {
-		
 	}
 
 }
