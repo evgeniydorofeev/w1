@@ -33,6 +33,5 @@ public class Client {
 	@Test
 	public void test3() {
 		//
-		
 	}
 }
