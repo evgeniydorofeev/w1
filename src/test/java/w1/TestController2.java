@@ -17,8 +17,8 @@
 //	@LocalServerPort
 //	private int port;
 //
-////	@Autowired
-////	TestRestTemplate restTemplate;
+//  @Autowired
+//	TestRestTemplate restTemplate;
 //
 //	@Test
 //	void test1() throws Exception {
