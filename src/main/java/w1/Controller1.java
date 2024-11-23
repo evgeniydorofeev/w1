@@ -1,5 +1,8 @@
 package w1;
 
+import java.util.concurrent.Executor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,10 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 //@RequestMapping("") 
 public class Controller1 {
 	
-	
 	@GetMapping("/v1")
     public String viewBooks(Model model) {
-//        model.addAttribute("book", "xxxx");
 		model.addAttribute("serverTime", "!!!!!!");
 		return "view1";
     }

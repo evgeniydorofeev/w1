@@ -7,13 +7,13 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Setter
 @Getter
+@Entity
 public class T2 extends EntityBase {
 	private String c1;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "t1_id")
+	@JoinColumn(name = "t1")
 	private T1 t1;
 }

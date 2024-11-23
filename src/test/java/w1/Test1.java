@@ -1,12 +1,21 @@
 package w1;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import java.util.concurrent.CompletableFuture;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClient;
+
+import lombok.SneakyThrows;
 
 //@ExtendWith(MockitoExtension.class)
 //@TestMethodOrder(OrderAnnotation.class)
 public class Test1 {
+
+	public int x;
+
+	public int getX() {
+		return x;
+	}
 
 //	static Stream<Arguments> stringIntAndListProvider() {
 //	    return Stream.of(
@@ -21,7 +30,7 @@ public class Test1 {
 //		List<Integer> l = spy(ArrayList.class);
 //		l.add(1);
 //		System.out.println(l.size());
-		// });
+	// });
 //		InOrder inOrder = Mockito.inOrder(l);
 //		inOrder.verify(l, times(2)).add(captor.capture());
 //		System.out.println(captor.getAllValues());
@@ -37,11 +46,18 @@ public class Test1 {
 //	private static List<Arguments> m1() {
 //		return List.of(Arguments.arguments("1"), Arguments.arguments("2"));
 //	}
-//	
+
+	@SneakyThrows
 	@Test
 	public void xxx() {
-//		int x = 0;
-//		assertThat(x).isEqualTo(1);
+//		  CompletableFuture.supplyAsync(() -> {
+//			  return null;
+//		  });
+//		  new FutureTask(()-> {
+//			  System.out.println("!!!!");
+//			  return null;
+//		  }).run();
+//		  Thread.sleep(100000);
 	}
 
 }
