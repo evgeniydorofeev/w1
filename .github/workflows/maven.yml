@@ -10,12 +10,11 @@ name: Java CI with Maven
 
 on:
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
   build:
-    name: test
     runs-on: ubuntu-latest
 
     steps:
