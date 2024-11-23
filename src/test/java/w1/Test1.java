@@ -1,9 +1,11 @@
 package w1;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.concurrent.CompletableFuture;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClient;
+
+import lombok.SneakyThrows;
 
 //@ExtendWith(MockitoExtension.class)
 //@TestMethodOrder(OrderAnnotation.class)
@@ -45,8 +47,17 @@ public class Test1 {
 //		return List.of(Arguments.arguments("1"), Arguments.arguments("2"));
 //	}
 
+	@SneakyThrows
 	@Test
 	public void xxx() {
+//		  CompletableFuture.supplyAsync(() -> {
+//			  return null;
+//		  });
+//		  new FutureTask(()-> {
+//			  System.out.println("!!!!");
+//			  return null;
+//		  }).run();
+//		  Thread.sleep(100000);
 	}
 
 }

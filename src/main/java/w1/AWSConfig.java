@@ -13,7 +13,7 @@ package w1;
 
 //@Configuration
 //@ConfigurationProperties("spring.datasource")
-public class AppAWSConfig {
+public class AWSConfig {
 
 //	@Value("${cloud.aws.credentials.accessKey}")
 //	private String accessKey;

@@ -1,3 +1,5 @@
+create sequence xxx increment by 50;
+
 create table t1 (
   id bigint primary key,
   c1 text

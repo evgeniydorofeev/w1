@@ -27,4 +27,6 @@ public class RestService1 {
 	@CacheEvict("cache1")
 	public void evict(Long id) {
 	}
+
 }
+

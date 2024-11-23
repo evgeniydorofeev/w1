@@ -9,7 +9,7 @@ import jakarta.persistence.SequenceGenerator;
 @MappedSuperclass
 public class EntityBase {
 	@Id
-	@SequenceGenerator(name = "xxx")
+	@SequenceGenerator(name = "xxx", sequenceName = "xxx", allocationSize = 50)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "xxx")
 	private Long id;
 	
