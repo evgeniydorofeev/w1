@@ -22,7 +22,7 @@
 //
 //	@Test
 //	void test1() throws Exception {
-////		ResponseEntity<String> res = new RestTemplate().getForEntity("http://localhost:" + port + "/t1", String.class);
-////		assertEquals("t1", res.getBody());
+//		ResponseEntity<String> res = new RestTemplate().getForEntity("http://localhost:" + port + "/t1", String.class);
+//		assertEquals("t1", res.getBody());
 //	}
 //}
