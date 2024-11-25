@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Java
-       distribution: 'temurin'
+        distribution: 'temurin'
       uses: actions/setup-java@v4
     - name: Build with Maven
       run: mvn test
