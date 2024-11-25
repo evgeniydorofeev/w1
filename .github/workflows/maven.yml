@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: PR
+name: Test PR to Develop
 
 on:
   pull_request:
