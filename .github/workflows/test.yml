@@ -1,1 +1,13 @@
+name: Test
 
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: test1
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo 111111
