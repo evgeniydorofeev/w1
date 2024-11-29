@@ -6,10 +6,9 @@ on:
 jobs:
   build:
     name: test1
-
     runs-on: ubuntu-latest
-
     steps:
-      - run: echo 111111
+    - run: |
+         echo 111111
 
 
