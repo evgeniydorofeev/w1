@@ -1,9 +1,13 @@
 package w1;
 
-import java.util.concurrent.CompletableFuture;
+import java.time.Clock;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.web.client.RestClient;
 
 import lombok.SneakyThrows;
 
