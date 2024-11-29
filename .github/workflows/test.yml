@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  test1:
     name: test1
 
     runs-on: ubuntu-latest
