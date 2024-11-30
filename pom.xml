@@ -11,6 +11,10 @@
 		<version>3.3.5</version>
 	</parent>
 
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -53,7 +57,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webflux</artifactId>
 		</dependency>
-		
+
 
 		<!--dependency>
 
@@ -140,7 +144,42 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<name>evgeniydorofeev082/w1:${project.version}</name>
+						<env>
+							<BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
+						</env>
+					</image>
+				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.45.1</version>
+				<configuration>
+					<verbose>true</verbose>
+					<images>
+						<image>
+							<name>w1</name>
+							<build>
+								<dockerFileDir>${project.basedir}/</dockerFileDir>
+							</build>
+						</image>
+					</images>
+				</configuration>
+				<executions>
+					<execution>
+						<id>build-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 </project>
