@@ -1,16 +1,21 @@
-name: Test
+name: test
 
 on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: test1
+  test:
+    name: test
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
     - run: |
          whoami
          pwd
          java -version
-
 
