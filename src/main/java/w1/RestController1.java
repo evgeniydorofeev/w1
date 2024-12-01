@@ -20,8 +20,8 @@ public class RestController1 {
 //	@Autowired
 //	private RestService1 s1;
 
-	@Autowired
-	private RestClient rc;
+//	@Autowired
+//	private RestClient rc;
 
 	@PersistenceContext
 	private EntityManager em;
