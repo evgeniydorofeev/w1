@@ -18,4 +18,5 @@ jobs:
          whoami
          pwd
          java -version
+         mvn -version
 
