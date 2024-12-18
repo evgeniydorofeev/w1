@@ -17,20 +17,31 @@ public class RestController1 {
 //	@Autowired
 //	SqsTemplate sqsTemplate;
 	
-//	@Autowired
-//	private RestService1 s1;
+	@Autowired
+	private RestService1 s1;
 
 //	@Autowired
 //	private RestClient rc;
 
 	@PersistenceContext
 	private EntityManager em;
+	
+	@Autowired
+	private T1Repository r1;
+	
 
 	@GetMapping("/t1/{id}")
-	public String t1(@PathVariable int id) {
+	public String t1(@PathVariable long id) {
+		
+//		T1 t1 = r1.findById(id).orElseGet(() -> {
+//			return r1.save(new T1());
+//		});
+		
+		s1.getById(id);
+//		s1.evict(id);  
 //		SendResult<String> res = sqsTemplate.send("test112", "!!!!!!!!!!!!!!!");
 //		return res.toString();
-		return "!!!";
+		return "!!!!!!";
 	}
 
 //	@RequestMapping("/")

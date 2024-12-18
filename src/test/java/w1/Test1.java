@@ -51,9 +51,13 @@ public class Test1 {
 //		return List.of(Arguments.arguments("1"), Arguments.arguments("2"));
 //	}
 
-	@SneakyThrows
+//	@SneakyThrows
 	@Test
 	public void xxx() {
+		System.out.println(0x1.0p+1);
+		System.out.println(Double.toString(0x1.0p-1));
+//		System.out.println(Duration.of(1, ChronoUnit.DAYS));
+		
 //		  CompletableFuture.supplyAsync(() -> {
 //			  return null;
 //		  });

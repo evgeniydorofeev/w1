@@ -5,10 +5,11 @@
 	<groupId>w1</groupId>
 	<artifactId>w1</artifactId>
 	<version>1.0</version>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.5</version>
+		<version>3.4.0</version>
 	</parent>
 
 	<properties>
@@ -34,9 +35,14 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+		</dependency>
+
+		<!--dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-		</dependency>
+		</dependency-->
 
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
@@ -53,13 +59,34 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webflux</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.cache2k</groupId>
+			<artifactId>cache2k-spring</artifactId>
+		</dependency>
 
-		<!--dependency>
+		<!--  
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<classifier>jakarta</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -70,28 +97,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-cache</artifactId>
+			<groupId>io.awspring.cloud</groupId>
+			<artifactId>spring-cloud-aws-starter-sqs</artifactId>
 		</dependency>
-
-			<groupId>org.ehcache</groupId>
-			<artifactId>ehcache</artifactId>
-			<classifier>jakarta</classifier>
-		</dependency-->
-
-
-		<!--
 
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-database-postgresql</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>io.awspring.cloud</groupId>
-			<artifactId>spring-cloud-aws-starter-sqs</artifactId>
 		</dependency>
 
 		<dependency>
@@ -107,12 +121,6 @@
 		<dependency>
 			<groupId>org.glassfish.web</groupId>
 			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-aws-autoconfigure</artifactId>
-			<version>2.2.6.RELEASE</version>
 		</dependency>
 
 		<dependency>
@@ -136,6 +144,20 @@
 			<scope>test</scope>
 		</dependency-->
 
+		<!--
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-jcache</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson-hibernate-53</artifactId>
+			<version>3.19.0</version>
+		</dependency>
+
+		-->
+
 	</dependencies>
 
 	<build>
@@ -145,15 +167,23 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<excludeDevtools>true</excludeDevtools>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+				<!--configuration>
 					<image>
 						<name>evgeniydorofeev082/w1:${project.version}</name>
 						<env>
 							<BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
 						</env>
 					</image>
-				</configuration>
+				</configuration-->
 			</plugin>
-
 			<plugin>
 				<groupId>io.fabric8</groupId>
 				<artifactId>docker-maven-plugin</artifactId>

@@ -1,7 +1,10 @@
 package w1;
 
-import java.io.Serializable;
 import java.util.List;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.springframework.cache.annotation.Cacheable;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
@@ -25,16 +28,18 @@ import lombok.Setter;
 //		  }
 //		)
 @Entity
-public class T1 extends EntityBase implements Serializable {
+//@Cacheable
+//@Cache(region = "t1", usage = CacheConcurrencyStrategy.READ_WRITE)
+public class T1 extends EntityBase {
 	private static final long serialVersionUID = 1L;
 
 	@Basic
-	private String c1;
+	private String c1;  
 
 //	@Enumerated(EnumType.STRING)
 //	private E1 e1;
 
 //	@OrderBy("name ASC")
-	@OneToMany(mappedBy = "t1", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "t1", fetch = FetchType.LAZY)
 	private List<T2> t2;
 }

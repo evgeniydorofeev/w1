@@ -17,3 +17,4 @@ public class T2 extends EntityBase {
 	@JoinColumn(name = "t1")
 	private T1 t1;
 }
+

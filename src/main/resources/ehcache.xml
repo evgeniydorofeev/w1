@@ -1,13 +1,15 @@
 <config
-  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
   xmlns='http://www.ehcache.org/v3'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
   xmlns:jsr107='http://www.ehcache.org/v3/jsr107'>
 
+  <!--
   <service>
     <jsr107:defaults enable-statistics="true"/>
   </service>
+  -->
 
-  <cache alias="cache1">
+  <cache alias="t2">
     <key-type>java.lang.Long</key-type>
     <value-type>w1.T1</value-type>
     <expiry>
@@ -17,4 +19,5 @@
       <offheap unit="MB">100</offheap>
     </resources>
   </cache>
+  
 </config>
