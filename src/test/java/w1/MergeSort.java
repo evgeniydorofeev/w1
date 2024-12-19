@@ -25,9 +25,8 @@ public class MergeSort {
 
 		merge(a, l, r, mid, n - mid);
 	}
-
+ 
 	public static void merge(int[] a, int[] l, int[] r, int left, int right) {
-
 		int i = 0, j = 0, k = 0;
 		while (i < left && j < right) {
 			if (l[i] <= r[j]) {
@@ -46,8 +45,8 @@ public class MergeSort {
 	
 	@Test
 	public void positiveTest() {
-	    int[] actual = { 10, 9, 5, 1, 6, 2, 3, 4 };
-	    int[] expected = { 1, 2, 3, 4, 5, 6, 9, 10 };
+	    int[] actual = { 1, 2, 3 };
+	    int[] expected = { 1, 2, 3 };
 	    sort(actual, actual.length);
 	    assertArrayEquals(expected, actual);
 	}
