@@ -3,6 +3,7 @@ package w1;
 import java.util.Collection;
 import java.util.List;
 
+import org.assertj.core.api.Assertions;
 import org.hamcrest.MatcherAssert;
 import static org.hamcrest.Matchers.*;
 import org.junit.jupiter.api.DisplayName;
@@ -24,7 +25,9 @@ public class Test1 {
 	@Test
 	@Order(0)
 	public void test0() {
-		MatcherAssert.assertThat(1, is(1));		
+		MatcherAssert.assertThat(1, is(1));
+		
+		Assertions.assertThat(1).isEqualTo(1);
 	}
 	
 	@Nested
